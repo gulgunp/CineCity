@@ -1,0 +1,28 @@
+//
+   Created by talha on 23.12.2015.
+extends ../admin_layout
+
+block content
+    .row(ng-controller="SeatController as Ctrl", ng-init="cineHall = #{JSON.stringify(cineHall)}")
+        .row
+            h3(style="text-align: center") {{ cineHall.name }}
+        .twelve.columns
+            form(ng-submit="addSeat()", method="post")
+                .row
+                    .ten.columns.offset-by-one
+                        input(type="text", placeholder="Seat Code", name="scode", id="scode", ng-model="newSeat.seatCode", required).u-full-width
+                        .twelve.columns
+                            input(type="submit", value="Add Seat").button-primary.button.u-pull-right
+        table.u-full-width.admin-table
+            thead
+                tr
+                    th #
+                    th Code
+                    th Delete
+            tbody
+                tr(ng-repeat="seat in seats")
+                    td {{ seat.seatCode }}|{{ seat.cineHall }}
+                    td: input(type="text", ng-model="seat.seatCode").u-full-width
+                    td
+                        button.button.button-delete(ng-click="delete($index)")
+                            i.fa-trash-o.fa-2x.fa

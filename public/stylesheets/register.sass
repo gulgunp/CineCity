@@ -1,0 +1,117 @@
+$distanceBacgroundColor: #170019
+$mainTextColor: #ff6e00
+$navigationBlueColor: #2d67a3
+$buttonRed: #91231e
+$darkBlue: #0b0230
+@font-face
+  font-family: "FiraSans"
+  src: url("../fonts/FiraSans-Heavy.otf")
+
+@font-face
+  font-family: "LatoBold"
+  src: url("../fonts/Lato-Bold.ttf")
+
+.title
+  text-align: center
+
+.storeTopBar
+  height: 77px
+  display: flex
+  align-items: flex-end
+  background: $distanceBacgroundColor
+  padding-bottom: 14px
+  border-bottom: 2px ridge $mainTextColor
+  .logo
+    margin-bottom: -14px
+    height: 100%
+    width: 200px
+    display: flex
+    align-items: flex-end
+  .title
+    font-family: "FiraSans"
+    color: $mainTextColor
+    font-size: 25pt
+    text-transform: uppercase
+
+.backgroundImg
+  height: 300px
+  width: 960px
+  position: relative
+  background:
+    image: url("http://ldmmedlaw.com/wp-content/uploads/2014/03/iStock_000004391035Small.jpg")
+    size: auto 600px
+    attachment: fixed
+    position: top center
+.content
+  display: flex
+  justify-content: center
+  height: 100%
+  .columns
+    display: flex
+    align-items: center
+    justify-content: center
+    margin-left: 0
+    width: 100%
+  .login
+    display: flex
+    height: 100%
+    width: 100%
+    border-right: 2px dashed #eee
+    padding: 100px 0px
+    align-self: center
+    align-items: center
+    justify-content: center
+    flex-direction: column
+    p
+      font-family: FiraSans
+      font-size: 23pt
+      color: $navigationBlueColor
+    form
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: center
+      input[type="email"],input[type="password"]
+        border: 1px solid $mainTextColor
+        font-family: LatoBold
+        background-color: $distanceBacgroundColor
+        color: #fafafa
+
+.memberDetail
+  display: flex
+  height: 100%
+  width: 100%
+  padding: 20px 0px
+  align-self: center
+  align-items: center
+  justify-content: center
+  flex-direction: column
+  p
+    font-family: FiraSans
+    font-size: 23pt
+    color: $navigationBlueColor
+  form
+    width: 80%
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+
+    .field
+      width: 80%
+      label
+        color: $mainTextColor
+        font-family: FiraSans
+        font-size: 15pt
+      input[type="email"],input[type="password"],input[type="text"]
+        border: 1px solid $mainTextColor
+        font-family: LatoBold
+        width: 100%
+        background-color: $distanceBacgroundColor
+        color: #fafafa
+      input[type="submit"]
+        background-color: $mainTextColor
+        color: #fafafa
+        width: 100%
+        &:hover
+          background-color: rgba($mainTextColor, 0.8)

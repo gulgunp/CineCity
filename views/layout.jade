@@ -1,0 +1,34 @@
+doctype html
+html
+    head
+        title= title
+        link(rel="stylesheet", href="/stylesheets/normalize.css")
+        link(rel="stylesheet", href="/stylesheets/skeleton.css")
+        link(rel='stylesheet', href='/stylesheets/style.css')
+        link(rel='stylesheet', href='/stylesheets/font-awesome.min.css')
+        link(rel='stylesheet', href='/stylesheets/animate.css')
+        link(rel='stylesheet', href='/stylesheets/angular-carousel.css')
+        script(src='/javascripts/angular.js')
+        script(src='/javascripts/angular-scroll.min.js')
+        script(src='/javascripts/angular-touch.min.js')
+        script(src='/javascripts/angular-sanitize.js')
+        script(src='/javascripts/angular-animate.js')
+        script(src='/javascripts/angular-carousel.min.js')
+        script(src='/javascripts/app.js')
+        script(src='/javascripts/controllers/cinehallController.js')
+        script(src='/javascripts/controllers/homeController.js')
+        script(src='/javascripts/controllers/storeController.js')
+        script(src='/javascripts/controllers/profileController.js')
+        script(src='/javascripts/directives/product.js')
+        script(src='/javascripts/directives/movie.js')
+        script(src='/javascripts/directives/nowShowingList.js')
+        script(src='/javascripts/directives/allMoviesList.js')
+        script(src='/javascripts/services/MoviesServices.js')
+        script(src='/javascripts/services/SeanceService.js')
+        script(src='/javascripts/services/CinemaService.js')
+        script(src='/javascripts/services/AuthService.js')
+        script(src='/javascripts/services/CampaignService.js')
+        script(src='/javascripts/services/CompaniesService.js')
+        block extraHeaders
+    body(ng-app="CineCityApp")
+        block content

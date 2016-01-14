@@ -1,0 +1,35 @@
+//
+   Created by talha on 27.11.2015.
+
+.admin-movie-modal
+    .modal-overlay(ng-click="hideModal()")
+    .modal-dialog(ng-style="dialogStyle")
+        .modal-close: a(href="#", title="Close", ng-click="hideModal()").u-pull-right: i.fa.fa-times.fa-2x
+        .modal-content
+            .row
+                .twelve.columns
+                    h3 {{ title }}
+                    hr
+                form
+                    .row
+                        .eight.columns.offset-by-two
+                            .three.columns
+                                label(for="name") Name:
+                                label(for="duration") Duration:
+                                label(for="imdb") IMDB:
+                                label(for="description") Description:
+                                label(for="img", style="margin-top: 44px") Image URL:
+                                label(for="teaser") Teaser URL:
+                                label(for="view_count", ng-show="title=='Update Movie'") View Count:
+                                //label(for="now_showing") Now Showing:
+                            .nine.columns
+                                input(id="name", name="name", type="text", placeholder="Movie Name", ng-model="data.name").u-full-width
+                                input(id="duration", name="duration", type="number", placeholder="Minutes...", ng-model="data.duration").u-full-width
+                                input(id="imdb", name="imdb", type="text", placeholder="IMDB Point", ng-model="data.imdb").u-full-width
+                                textarea(id="description", name="description",rows="6", placeholder="Movie Description..", ng-model="data.description").u-full-width
+                                input(id="img", name="img", type="text", placeholder="Movie Image URL", ng-model="data.img").u-full-width
+                                input(id="teaser", name="teaser", type="text", placeholder="Movie Teaser URL", ng-model="data.teaser").u-full-width
+                                input(id= "view_count", name= "view_count", type="number", placeholder="View Count", ng-model="data.view_count", ng-show="title=='Update Movie'").u-full-width
+                                input(id="now_showing", name="now_showing", type="checkbox" ng-click="check()" value="{{ data.now_showing }}" ng-checked="data.now_showing == 1")
+                                label(for="now_showing",style="display:inline; margin-left: 7px") Now Showing
+                                input(id="addMovie", name="addMovie", type="submit", value="{{ title }}",ng-click="addUpdate()").button.button-primary.u-pull-right

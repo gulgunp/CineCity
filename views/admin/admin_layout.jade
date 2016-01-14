@@ -1,0 +1,55 @@
+doctype html
+html
+    head
+        meta(charset="utf-8")
+        title --CineCity Admin--
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css")
+        link(rel='stylesheet', href='/stylesheets/normalize.css')
+        link(rel='stylesheet', href='/stylesheets/skeleton.css')
+        link(rel='stylesheet', href='/stylesheets/admin.css')
+        link(rel='stylesheet', href="/stylesheets/font-awesome.min.css")
+        script(src="/javascripts/angular.js")
+        script(src="/javascripts/adminapp.js")
+
+        script(src="/javascripts/services/admin/MoviesServices.js")
+        script(src="/javascripts/services/admin/MembersService.js")
+        script(src="/javascripts/services/admin/AuthService.js")
+        script(src="/javascripts/services/admin/CompaniesService.js")
+        script(src="/javascripts/services/admin/CinemaService.js")
+        script(src="/javascripts/services/admin/CinehallService.js")
+        script(src="/javascripts/services/admin/SeatService.js")
+        script(src="/javascripts/services/admin/CampaignService.js")
+        script(src="/javascripts/services/admin/SeanceService.js")
+
+
+        script(src="/javascripts/controllers/admin/MoviesController.js")
+        script(src="/javascripts/controllers/admin/MembersController.js")
+        script(src="/javascripts/controllers/admin/NavigationController.js")
+        script(src="/javascripts/controllers/admin/DashboardController.js")
+        script(src="/javascripts/controllers/admin/CompaniesController.js")
+        script(src="/javascripts/controllers/admin/CinemaController.js")
+        script(src="/javascripts/controllers/admin/CinehallController.js")
+        script(src="/javascripts/controllers/admin/CampaignController.js")
+        script(src="/javascripts/controllers/admin/SeatController.js")
+        script(src="/javascripts/controllers/admin/SeanceController.js")
+
+        script(src="/javascripts/directives/admin/admin_movie_modal.js")
+    body(ng-app="AdminApp")
+        .container
+            nav(ng-controller="NavigationController")
+                .ten.columns
+                    ul
+                        li(ng-class="{'active': $root.currentPage == 1 }"): a(href="/admin/dashboard") Dashboard
+                        li(ng-class="{'active': $root.currentPage == 2 }"): a(href="/admin/dashboard/cinecompanies") Cinema Companies
+                        li(ng-class="{'active': $root.currentPage == 3 }"): a(href="/admin/dashboard/movies") Movies
+                        li(ng-class="{'active': $root.currentPage == 6 }"): a(href="/admin/dashboard/seances") Seances
+                        li(ng-class="{'active': $root.currentPage == 4 }"): a(href="/admin/dashboard/campaigns") Campaigns
+                        li(ng-class="{'active': $root.currentPage == 5 }"): a(href="/admin/dashboard/members") Members
+                .two.columns
+                    .user-bar.u-pull-right
+                        p {{ username }}
+                            a(href="#" ng-click="logout()") Logout
+            .dash-content
+                block content
+        block modals

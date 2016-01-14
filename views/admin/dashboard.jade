@@ -1,0 +1,32 @@
+//
+   Created by talha on 23.11.2015.
+
+extends admin_layout
+
+block content
+    div(ng-controller="DashboardController" ng-show="validUser")
+        .row
+            //En Çok izlenen
+            .eight.columns
+                .movie
+                    .six.columns
+                        img(src="" + mostViewedMovie[0].img).u-max-full-width
+                    .six.columns(style="display:flex; justify-content: center; flex-direction: column")
+                        h3 #{mostViewedMovie[0].name}
+                            //span 2014
+                        h5 IMDB:
+                            p #{mostViewedMovie[0].imdb}
+                        h5 Views:
+                            p #{mostViewedMovie[0].view_count}
+                        h5 Description:
+                        p #{mostViewedMovie[0].description}
+            //Son üyleler
+            .four.columns
+                h5(style="height:30px; text-align: center; margin: 0; padding: 0") Last Members
+                hr(style="margin: 10px 0")
+                ul(style="list-style: none")
+                    each member in members
+                        li.last-member-item(style="text-align: center") #{member.name} #{member.surname}
+            //Genel bilgiler
+        .row
+            .twelve.columns

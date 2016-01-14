@@ -1,0 +1,99 @@
+@font-face {
+  font-family: "FiraSans";
+  src: url("../fonts/FiraSans-Heavy.otf"); }
+
+@font-face {
+  font-family: "LatoBold";
+  src: url("../fonts/Lato-Bold.ttf"); }
+
+.title {
+  text-align: center; }
+
+.storeTopBar {
+  height: 77px;
+  display: flex;
+  align-items: flex-end;
+  background: #170019;
+  padding-bottom: 14px;
+  border-bottom: 2px ridge #ff6e00; }
+  .storeTopBar .logo {
+    margin-bottom: -14px;
+    height: 100%;
+    width: 200px;
+    display: flex;
+    align-items: flex-end; }
+  .storeTopBar .title {
+    font-family: "FiraSans";
+    color: #ff6e00;
+    font-size: 25pt;
+    text-transform: uppercase; }
+  .storeTopBar .userField {
+    display: flex; }
+    .storeTopBar .userField .userInfo {
+      margin: 0 5px;
+      color: #ff6e00;
+      font-family: "FiraSans";
+      font-size: 18px; }
+    .storeTopBar .userField a {
+      padding: 5px;
+      margin: 0 5px;
+      color: #2d67a3;
+      font-family: "FiraSans";
+      font-size: 15px;
+      text-decoration: none; }
+      .storeTopBar .userField a:hover {
+        color: #fafafa;
+        text-decoration: underline;
+        transition: all ease-in-out 0.3s; }
+
+.backgroundImg {
+  height: 350px;
+  width: 100%;
+  position: relative;
+  background-image: url("/images/cropped-klaket.jpg");
+  background-size: auto 600px;
+  background-attachment: fixed;
+  background-position: top center; }
+  .backgroundImg .profilePhoto {
+    border: 2px solid #91231e;
+    width: 200px;
+    height: 200px;
+    background-image: url("/images/user.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 90px;
+    margin: 90px;
+    border-radius: 50%; }
+
+.userDetail {
+  padding: 40px 0;
+  margin: 0px 20px;
+  font-size: 15px;
+  font-family: "LatoBold"; }
+  .userDetail .nameSurname {
+    padding: 0 80px;
+    font-size: 25px;
+    font-family: "FiraSans";
+    color: #91231e;
+    border: 2px;
+    border-bottom: #91231e; }
+  .userDetail .field {
+    margin: 10px 0;
+    margin-left: 80px; }
+    .userDetail .field label {
+      color: #ff6e00;
+      font-family: FiraSans;
+      font-size: 12pt; }
+    .userDetail .field p {
+      font-family: LatoBold;
+      margin-left: 20px;
+      margin-bottom: 5px;
+      font-size: 13pt; }
+      .userDetail .field p span {
+        font-family: FiraSans;
+        font-size: 12pt;
+        color: #ff6e00; }
+
+/*# sourceMappingURL=profile.css.map */

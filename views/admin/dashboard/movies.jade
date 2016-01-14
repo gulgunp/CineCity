@@ -1,0 +1,40 @@
+//
+   Created by talha on 26.11.2015.
+extends ../admin_layout
+block content
+    .row(ng-controller="MoviesController as Ctrl" ng-show="validUser")
+
+        .nine.columns
+            form
+                .form-search
+                    input(type="text", placeholder="Search", name="search", id="search", ng-model="search")
+                    label(for="search"): i.fa.fa-search
+        .three.columns
+            button.button.pull-right.button-primary(ng-click="insert()") Add Movie
+        table.u-full-width.admin-table
+            thead
+                tr
+                    th #
+                    th Name
+                    th IMDB
+                    th Duration
+                    th Description
+                    th Update
+                    th Delete
+            tbody
+                tr(ng-repeat="movie in movies | filter: search")
+                    td {{movie.id}}
+                    td {{movie.name}}
+                    td {{movie.imdb}}
+                    td {{movie.duration}}
+                    td {{movie.description}}
+                    td
+                        button.button.button-update(ng-click="update($index)")
+                            i.fa-wrench.fa-2x.fa
+                    td
+                        button.button.button-delete(ng-click="delete($index)")
+                            i.fa-trash-o.fa-2x.fa
+
+        //admin-movie-modal(ng-show="$root.modalShow", title="$root.modalMovieTitle", data="$root.modalMovie")
+block modals
+    admin-movie-modal(ng-show="$root.modalShow", title="$root.modalMovieTitle", data="$root.modalMovie")

@@ -1,0 +1,30 @@
+html
+    head
+        meta(charset="utf-8")
+        title --CineCity Admin--
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css")
+        link(rel='stylesheet', href='/stylesheets/normalize.css')
+        link(rel='stylesheet', href='/stylesheets/skeleton.css')
+        link(rel='stylesheet', href='/stylesheets/admin.css')
+        script(src="/javascripts/angular.js")
+
+        script(src="/javascripts/adminapp.js")
+        script(src="/javascripts/controllers/admin/LoginController.js")
+
+        script(src="/javascripts/services/admin/AuthService.js")
+
+
+
+    body(ng-app="AdminApp")
+        .container(ng-controller="LoginController")
+            .row
+                .six.columns.offset-by-three.login-container
+                    form(method="post", ng-submit="login()")
+                        .twelve.columns
+                            label(style="color: darkred; text-align: center" ng-show="showError") {{ errorMessage }}
+                        label(for="email") Your Email
+                        input(id="email", name="email", placeholder="test@mailbox.com", type="email", ng-model="loginData.email" required).u-full-width
+                        label(for="pass") Your Password
+                        input(id="pass", name="pass", placeholder="Something special for you", type="password", ng-model="loginData.password" required).u-full-width
+                        button.button-primary.button.u-pull-right() Login

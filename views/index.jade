@@ -1,0 +1,42 @@
+extends layout
+
+block content
+    div(ng-controller="HomeController")
+        .distance
+            .movieName
+                #title-container: #movie-title(ng-click="goToMovie()") {{ teaserTitle }}
+            .teaserField#tcontainer(du-scroll-container)
+                .content()
+                    .teaser(id="t{{($index + 1)}}", ng-repeat="movie in nowShowings")
+                        iframe(width="560" height="351" ng-src="{{trustUrl(movie.teaser)}}" frameborder="0" allowfullscreen).u-max-full-width
+            .logoField
+                .logoImg: img(src="/images/logo.png").u-max-full-width.u-pull-right.wow.tada
+                .machineImg: //img(src="/images/projector.png").u-max-full-width.u-pull-left
+                .navField
+                    a(href="#" ng-click="goToAllMovies()") Tüm Filmler
+                    a(href="/cinehall") Salonlar
+                    a(href="{{userBarUrl}}") {{ userLoggedInText }}
+        .campaingField(ng-show="campaigns.length > 0")
+            .leftArrow.wow.fadeInLeft(ng-click="prevCamp()")
+            ul(rn-carousel, rn-carousel-index="carouselIndex" rn-carousel-buffered).campaign
+                li(ng-repeat="campaign in campaigns"): div(style="background-image: url('{{campaign.img}}'); background-size: 100% 100%")
+            .rightArrow.wow.fadeInRight(ng-click="nextCamp()")
+        .seatImgField
+        .nowSeenMovie
+            .container
+                .row
+                    .topBar#navContainer
+                        .five.columns
+                            .navBrand {{ navElements[currentListPage] }}
+                        .five.columns.u-pull-right
+                            .navigation
+                                a(ng-repeat="nav in navElements", ng-click="showListPage($index)", ng-show="$index != currentListPage") {{nav}}
+            .container
+                .row
+                    .twelve.columns
+                        .movieContainer(style="min-height: 1000px")
+                            //now-showing-list(data="nowShowings", ng-show = "currentListPage == 0")
+                            all-movies-list(data="showedMovies")
+                            //all-movies-list(data="futureFilms", ng-show="currentListPage == 2")
+        script(src="/javascripts/wow.min.js")
+        script new WOW().init();

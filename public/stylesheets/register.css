@@ -1,0 +1,113 @@
+@font-face {
+  font-family: "FiraSans";
+  src: url("../fonts/FiraSans-Heavy.otf"); }
+
+@font-face {
+  font-family: "LatoBold";
+  src: url("../fonts/Lato-Bold.ttf"); }
+
+.title {
+  text-align: center; }
+
+.storeTopBar {
+  height: 77px;
+  display: flex;
+  align-items: flex-end;
+  background: #170019;
+  padding-bottom: 14px;
+  border-bottom: 2px ridge #ff6e00; }
+  .storeTopBar .logo {
+    margin-bottom: -14px;
+    height: 100%;
+    width: 200px;
+    display: flex;
+    align-items: flex-end; }
+  .storeTopBar .title {
+    font-family: "FiraSans";
+    color: #ff6e00;
+    font-size: 25pt;
+    text-transform: uppercase; }
+
+.backgroundImg {
+  height: 300px;
+  width: 960px;
+  position: relative;
+  background-image: url("http://ldmmedlaw.com/wp-content/uploads/2014/03/iStock_000004391035Small.jpg");
+  background-size: auto 600px;
+  background-attachment: fixed;
+  background-position: top center; }
+
+.content {
+  display: flex;
+  justify-content: center;
+  height: 100%; }
+  .content .columns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0;
+    width: 100%; }
+  .content .login {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    border-right: 2px dashed #eee;
+    padding: 100px 0px;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; }
+    .content .login p {
+      font-family: FiraSans;
+      font-size: 23pt;
+      color: #2d67a3; }
+    .content .login form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; }
+      .content .login form input[type="email"], .content .login form input[type="password"] {
+        border: 1px solid #ff6e00;
+        font-family: LatoBold;
+        background-color: #170019;
+        color: #fafafa; }
+
+.memberDetail {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  padding: 20px 0px;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; }
+  .memberDetail p {
+    font-family: FiraSans;
+    font-size: 23pt;
+    color: #2d67a3; }
+  .memberDetail form {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    .memberDetail form .field {
+      width: 80%; }
+      .memberDetail form .field label {
+        color: #ff6e00;
+        font-family: FiraSans;
+        font-size: 15pt; }
+      .memberDetail form .field input[type="email"], .memberDetail form .field input[type="password"], .memberDetail form .field input[type="text"] {
+        border: 1px solid #ff6e00;
+        font-family: LatoBold;
+        width: 100%;
+        background-color: #170019;
+        color: #fafafa; }
+      .memberDetail form .field input[type="submit"] {
+        background-color: #ff6e00;
+        color: #fafafa;
+        width: 100%; }
+        .memberDetail form .field input[type="submit"]:hover {
+          background-color: rgba(255, 110, 0, 0.8); }
+
+/*# sourceMappingURL=register.css.map */

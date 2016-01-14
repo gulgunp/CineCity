@@ -1,0 +1,51 @@
+//
+   Created by talha on 24.12.2015.
+doctype html
+html
+    head
+        title= title
+        link(href='http://fonts.googleapis.com/css?family=Lato:400,700', rel='stylesheet', type='text/css')
+        link(rel="stylesheet", href="/stylesheets/normalize.css")
+        link(rel="stylesheet", href="/stylesheets/skeleton.css")
+        link(rel='stylesheet', type='text/css', href='/stylesheets/ticket.css')
+        link(rel='stylesheet', href='/stylesheets/font-awesome.min.css')
+        link(rel='stylesheet', href='/stylesheets/animate.css')
+        script(src="/javascripts/angular.js")
+        script(src="/javascripts/ticketApp.js")
+        script(src="/javascripts/controllers/TicketController.js")
+        script(src="/javascripts/services/AuthServiceTicket.js")
+
+    body
+        .container(style="background: #fff; margin-top:50px")
+            .row(ng-app="TicketApp")
+                .twelve.columns(ng-controller="TicketController")
+                    .storeTopBar
+                        .three.columns
+                            .logo
+                                a(href="/").u-max-full-width: img(src="/images/logo.png").u-max-full-width
+                        .six.columns
+                            .title Bilet Al
+
+            .row(style="background: #fafafa")
+                .wrapper
+                    .containerSeat
+                        #seat-map
+                            .front-indicator Ekran
+                        .booking-details
+                            h2 Detaylar
+                            h3
+                                | Seçilmiş  Koltuklar (
+                                span#counter 0
+                                | ):
+                            ul#selected-seats
+                            |                    Total:
+                            b
+                                | $
+                                span#total 0
+                            button.checkout-button#buy Satın Al »
+                            #legend
+            .showModal#modal
+                p Biletler alındı. Birazdan ana sayfaya yönlendirileceksiniz.
+        script(src="/javascripts/jquery-1.11.3.js")
+        script(src="/javascripts/jquery.seat-charts.min.js")
+        script(src="/javascripts/ticket.js")

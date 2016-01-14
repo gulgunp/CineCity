@@ -1,0 +1,29 @@
+//
+   Created by gulgu on 19.12.2015.
+
+extends layout
+
+block extraHeaders
+    link(rel="stylesheet", href="/stylesheets/store.css")
+
+block content
+    div(ng-controller="StoreController")
+        .container(style="background: #fff; margin-top:50px")
+            .row
+                .twelve.columns
+                    .storeTopBar
+                        .three.columns
+                            .logo
+                                img(src="/images/logo.png").u-max-full-width
+                        .six.columns
+                            .title Ürünler
+                        .three.columns
+                            form(style = "margin-bottom: 5px" )
+                                .searchBar
+                                    input(type="text", placeholder="Arama", name="search", id="search", ng-model="search")
+                                    label(for="search"): i.fa.fa-search
+
+            .row
+                .products
+                    .four.columns(ng-repeat= "product in products | filter: search" ng-class="{ 'zero-left': ($index+1) % 4 == 0 }")
+                        product(data = "product")

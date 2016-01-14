@@ -1,0 +1,200 @@
+$nav_bg: #6BDAFF
+
+.login-container
+  display: flex
+  height: 100vh
+  align-items: center
+  position: fixed
+
+
+nav
+  display: flex
+  z-index: 9999
+  position: fixed
+  max-width: 960px
+  width: 80%
+  //margin-top: 10px
+  padding: 0
+  align-items: center
+  background: white
+  border-bottom: 2px ridge #9DFF1C
+
+  .user-bar
+    display: flex
+    align-items: center
+    p
+      font-size: 14px
+      padding: 0
+      margin: 0
+    a
+      cursor: pointer
+      text-decoration: none
+      font-size: 12px
+      font-weight: bold
+      margin: 0 5px
+
+  ul
+    display: flex
+    list-style: none
+    padding: 0
+    margin: 0
+    li
+      display: flex
+      margin: 0
+      margin-bottom: 5px
+      padding: 5px 10px
+      font-weight: bold
+      border-right: inset 1px #FF7B1C
+      border-left: inset 1px #FF7B1C
+      transition: all 0.3s ease-in-out
+      cursor: pointer
+      cursor: hand
+
+      a
+        text-decoration: none
+        color: #141414
+        &:hover
+          color: #141414
+
+      &.active
+        background: #FF7B1C
+        a
+          color: #fafafa
+          &:hover
+            color: #fafafa
+      &:first-child
+        border-left: none
+      &:last-child
+        border-right: none
+      &:hover
+        background: rgba(#FF7B1C,0.3)
+        transition: all 0.3s ease-in-out
+
+.dash-content
+  padding-top: 60px
+  position: relative
+
+.movie
+  position: relative
+  display: flex
+  img
+    border: 1px #9DFF1C ridge
+    border-radius: 5px
+  h3
+    margin-bottom: 10px
+    span
+      color: #aaa
+      margin-left: 5px
+      font-size: 70%
+  h5
+    font-size: 20px
+    margin-bottom: 10px
+    height: 30px
+    min-height: 30px
+    p
+      display: inline-block
+      margin-left: 5px
+      font-weight: bold
+.last-member-item
+  cursor: pointer
+  transition: all 0.2s linear
+  &:hover
+    color: #0FA0CE
+    transition: all 0.2s linear
+    text-decoration: underline
+
+
+.admin-table
+  td
+    input
+      margin-bottom: 0px
+    .button
+      margin-bottom: 0px
+    .button-update
+      border: none
+      background: #ff9100
+      color: #fafafa
+      width: 50px
+      padding: 0
+      padding-top: 3px
+      &:hover
+        background: rgba(#ff9100, 0.8)
+    .button-delete
+      border: none
+      background: #d50000
+      color: #fafafa
+      width: 50px
+      padding: 0
+      padding-top: 3px
+      &:hover
+        background: rgba(#d50000, 0.8)
+
+.form-search
+  position: relative
+  height: 38px
+  padding: 0
+  border-radius: 4px
+  box-shadow: none
+  box-sizing: border-box
+  -webkit-appearance: none
+  -moz-appearance: none
+  appearance: none
+  input[type="text"]
+    width: 100%
+  i
+    color: #a1a1a1
+    position: absolute
+    right: 0px
+    top: 0px
+    padding: 5px 5px
+    font-size: 24px
+
+
+.modal-overlay
+  position: absolute !important
+  z-index: 9999
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  -webkit-transform: translate(-50%, -50%)
+  -moz-transform: translate(-50%, -50%)
+  width: 100%
+  height: 100%
+  background-color: #000000
+  opacity: 0.8
+.modal-dialog
+  z-index: 10000
+  position: absolute
+  width: 50% /* Default */
+
+  /* Center the dialog */
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  -webkit-transform: translate(-50%, -50%)
+  -moz-transform: translate(-50%, -50%)
+  border-radius: 10px
+  background-color: #fff
+  box-shadow: 4px 4px 80px #000
+
+  .modal-close
+    a
+      color: darkred
+      text-align: end
+      padding: 7px
+  .modal-content
+    h3
+      text-align: center
+    hr
+      margin-top: 10px
+    form
+      //padding: 20px 0
+      //margin: 10px 0
+      textarea
+        resize: none
+      label
+        display: flex
+        align-items: center
+        justify-content: flex-end
+        height: 38px
+        margin-bottom: 1.5rem

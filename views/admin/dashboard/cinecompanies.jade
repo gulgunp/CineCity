@@ -1,0 +1,30 @@
+//
+   Created by talha on 23.12.2015.
+
+extends ../admin_layout
+
+block content
+    .row(ng-controller="CompaniesController as Ctrl")
+        .nine.columns
+            input(type="text", placeholder="Company Name", name:"cname", id="cname", ng-model="company.name").u-full-width
+        .three.columns
+            button.button.pull-right.button-primary(ng-click="addCompany()") Add Company
+        table.u-full-width.admin-table
+            thead
+                tr
+                    th #
+                    th Name
+                    th List Cinemas
+                    th Update
+                    th Delete
+            tbody
+                tr(ng-repeat="company in companies")
+                    td {{company.id}}
+                    td: input(type="text", ng-model="company.name").u-full-width
+                    td: a(href="/admin/dashboard/cinecompanies/{{company.id}}/cinemas").button Cinemas
+                    td
+                        button.button.button-update(ng-click="update($index)")
+                            i.fa-wrench.fa-2x.fa
+                    td
+                        button.button.button-delete(ng-click="delete($index)")
+                            i.fa-trash-o.fa-2x.fa

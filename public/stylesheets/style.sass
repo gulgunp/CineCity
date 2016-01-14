@@ -1,0 +1,378 @@
+$distanceBacgroundColor: #170019
+$mainTextColor: #ff6e00
+$navigationBlueColor: #2d67a3
+$buttonRed: #91231e
+$darkBlue: #0b0230
+@font-face
+  font-family: "FiraSans"
+  src: url("../fonts/FiraSans-Heavy.otf")
+
+@font-face
+  font-family: "LatoBold"
+  src: url("../fonts/Lato-Bold.ttf")
+
+body
+  padding: 0px
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif
+  margin: 0px
+  background: $distanceBacgroundColor
+
+.distance
+  display: flex
+  height: 100vh
+  width: 1200px
+  background: $distanceBacgroundColor
+  margin: 0px auto
+  .movieName
+    align-items: center
+    color: $mainTextColor
+    height: 100%
+    width: 120px
+    overflow: hidden
+    display: flex
+    justify-content: center
+    #title-container
+      height: 375px
+      overflow: hidden
+      width: 30pt
+      position: relative
+      #movie-title
+        cursor: pointer
+        position: absolute
+        font-size: 30pt
+        letter-spacing: 5px
+        font-family: "FiraSans"
+        width: 30pt
+        word-wrap: break-word
+        text-transform: uppercase
+        text-align: center
+  .teaserField
+    color: $mainTextColor
+    width: 460px
+    height: 100vh
+    margin-left: 10px
+    margin-right: 10px
+    z-index: 5000
+    background:
+      image: url("/images/tape.png")
+    overflow: hidden
+    .content
+      .teaser
+        width: 370px
+        margin-left: 46px
+        height: 351px
+        margin-top: 20px
+        background: green
+        border-radius: 8px
+        overflow: hidden
+        iframe
+          border-radius: 8px
+
+        &:first-child
+          margin-top: 146px
+        &:last-child
+          margin-bottom: 204px
+  .logoField
+    color: $mainTextColor
+    width: 460px
+    display: flex
+    flex-direction: column
+    margin-right: 10px
+    margin-left: 10px
+    .logoImg
+      height: 140px
+    .machineImg
+      height: 480px
+      min-height: 320px
+      background:
+        image: url("/images/projector.png")
+        repeat: no-repeat
+        size: contain
+        position-x: -70px
+        position-y: 30px
+    .navField
+      height: 80px
+      width: 100%
+      display: flex
+      font-family: "FiraSans"
+      font-size: 15pt
+      a
+        display: flex
+        align-items: center
+        justify-content: center
+        position: relative
+        height: 100%
+        color: $mainTextColor
+        text-decoration: none
+        width: 141px
+        border-right: 2px solid #fafafa
+        transition: all linear 0.2s
+
+        &:last-child
+          border-right: none
+        &:hover
+          color: rgba($mainTextColor, 0.7)
+          transition: all linear 0.2s
+
+.campaingField
+  position: relative
+  height: 350px
+  width: 1200px
+  margin: 0px auto
+  .leftArrow
+    position: absolute
+    cursor: pointer
+    top: 140px
+    width: 70px
+    z-index: 9999
+    height: 70px
+    background:
+      image: url("/images/CampLeftArrow.png")
+      size: cover
+    left: 30px
+    transition: all ease-in-out 0.2s
+    &:hover
+      width: 80px
+      height: 80px
+      left: 25px
+      top: 135px
+      transition: all ease-in-out 0.2s
+  .rightArrow
+    cursor: pointer
+    position: absolute
+    top: 140px
+    width: 70px
+    height: 70px
+    background:
+      image: url("/images/CampRightArrow.png")
+      size: cover
+    right: 30px
+    transition: all ease-in-out 0.2s
+    &:hover
+      width: 80px
+      height: 80px
+      right: 25px
+      top: 135px
+      transition: all ease-in-out 0.2s
+  .campaign
+    height: 100%
+    width: 100%
+    div
+      height: 100%
+      width: 100%
+
+.seatImgField
+  height: 350px
+  width: 1200px
+  background:
+    size: cover
+    image: url("/images/seats.jpg")
+    attachment: fixed
+  margin: 0px auto
+
+.nowSeenMovie
+  background-color: white
+  color: $mainTextColor
+  width: 1200px
+  margin: 0px auto
+  .topBar
+    height: 91px
+    width: 100%
+    position: relative
+    .columns
+      height: 100%
+    .navBrand
+      padding-bottom: 14px
+      height: calc(100% - 14px)
+      display: flex
+      justify-content: flex-start
+      align-items: flex-end
+      font-family: "FiraSans"
+      font-size: 35pt
+    .navigation
+      height: calc(100% - 14px)
+      font-family: "FiraSans"
+      font-size: 20pt
+      display: flex
+      align-items: flex-end
+      justify-content: space-around
+      border-bottom: 2px inset $mainTextColor
+      padding-bottom: 14px
+      a
+        cursor: pointer
+        color: $navigationBlueColor
+        text-decoration: none
+        &:hover
+          color: rgba($navigationBlueColor, 0.7)
+  .movieContainer
+    padding: 21px 0
+    width: 100%
+    height: 100%
+    .movie
+      position: relative
+      display: flex
+      padding: 24px 0
+      overflow: hidden
+      border-bottom: 3px solid #aaa
+
+      .showTicketView
+        transition: all ease-in-out 0.3s
+        top: 0 !important
+
+      .ticketView
+        transition: all ease-in-out 0.3s
+        position: absolute
+        left: 0
+        display: flex
+        justify-content: center
+        width: 100%
+        height: 100%
+        background: rgba($mainTextColor, 0.9)
+        top: 100%
+        .close
+          position: absolute
+          right: 10px
+          top: 10px
+          display: inline-block
+          color: #fafafa
+          font-size: 20pt
+          cursor: pointer
+        .content
+          display: inline-block
+          margin: 15px
+          width: 80%
+
+          .movieName
+            color: #fafafa
+            font-family: FiraSans
+            font-size: 15pt
+          .messageContainer
+            display: flex
+            align-items: center
+            .image
+              width: 180px
+              height: 260px
+              img
+                height: 100%
+                width: 100%
+            .message
+              display: flex
+              width: calc(100% - 180px)
+              flex-direction: column
+              color: #fafafa
+              font-family: FiraSans
+              font-size: 18pt
+              align-items: center
+              p
+                margin-bottom: 5px
+                display: inline-block
+          .ticketFormContainer
+            margin-top: -20px
+            form
+              margin-bottom: 0px
+              label
+                font-family: FiraSans
+                font-size: 12pt
+                color: #fafafa
+              .selectContainer
+                margin: 10px 20px
+                padding: 10px
+                display: inline-block
+              select
+                height: 30px
+                font-family: LatoBold
+              .selectSeatButton
+                text-decoration: none
+                background: $distanceBacgroundColor
+                color: #fafafa
+                font-family: FiraSans
+                font-size: 13pt
+                display: inline-block
+                padding: 8px 15px
+                border-radius: 5px
+                cursor: pointer
+
+      .image
+        width: 230px
+        height: 351px
+        overflow: hidden
+        border: 3px solid $mainTextColor
+      .movieContent
+        width: 100%
+        .description
+          padding: 8px 11px
+          font-family: "LatoBold"
+          font-size: 15pt
+          color: $darkBlue
+        .details
+          padding: 0 11px
+          .detail
+            text-decoration: underline
+            font-family: "FiraSans"
+            font-size: 15pt
+            text-align: right
+            padding: 11px 10px
+            a
+              color: $distanceBacgroundColor
+              &:hover
+                color: rgba($distanceBacgroundColor, 0.7)
+          .seances
+            font-family: "LatoBold"
+            color: #686868
+            span
+              font-size: 18pt
+              text-decoration: underline
+              display: block
+            ul
+              padding: 0
+              margin: 11px 4px
+              list-style: none
+              font-size: 15pt
+              li
+                padding: 0 6px
+                display: inline-block
+                border-right: 1px ridge #686868
+                &:last-child
+                  border-right: none
+
+        .name
+          color: $mainTextColor
+          padding: 0 11px
+          font-family: "FiraSans"
+          font-size: 20pt
+        .info
+          padding: 0 20px
+          .statisticBar
+            padding: 10px 0
+            color: $navigationBlueColor
+            font-family: "LatoBold"
+            font-size: 15pt
+            .seen
+              margin-bottom: 6px
+            .point
+              margin-top: 6px
+          .ticketButton
+            margin: 4px 20px
+            a
+              height: 36px
+              padding: 8px 14px
+              display: flex
+              align-items: center
+              justify-content: center
+              width: 112px
+              border-radius: 5px
+              background: $buttonRed
+              text-decoration: none
+              color: #fafafa
+              font-family: "FiraSans"
+              font-size: 15pt
+              cursor: pointer
+              &:hover
+                background: rgba($buttonRed, 0.7)
+
+.title-slide-animation
+  -webkit-transition: 10s linear
+  -moz-transition: 10s linear
+  -ms-transition: 10s linear
+  -o-transition: 10s linear
+  transition: 10s linear

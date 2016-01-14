@@ -1,0 +1,34 @@
+//
+   Created by talha on 23.12.2015.
+extends ../admin_layout
+
+block content
+    .row(ng-controller="CinehallController as Ctrl", ng-init="cinema = #{JSON.stringify(cinema)}")
+        .row
+            h3(style="text-align: center") {{ cinema.name }}
+        .twelve.columns
+            form(ng-submit="addCineHall()", method="post")
+                .row
+                    .ten.columns.offset-by-one
+                        input(type="text", placeholder="Cinehall Name", name="cname", id="cname", ng-model="newCinehall.name", required).u-full-width
+                        .twelve.columns
+                            input(type="submit", value="Add Cinehall").button-primary.button.u-pull-right
+        table.u-full-width.admin-table
+            thead
+                tr
+                    th #
+                    th Name
+                    th List Seats
+                    th Update
+                    th Delete
+            tbody
+                tr(ng-repeat="hall in halls")
+                    td {{hall.id}}
+                    td: input(type="text", ng-model="hall.name").u-full-width
+                    td: a(href="/admin/dashboard/{{hall.id}}/seats").button Seats
+                    td
+                        button.button.button-update(ng-click="update($index)")
+                            i.fa-wrench.fa-2x.fa
+                    td
+                        button.button.button-delete(ng-click="delete($index)")
+                            i.fa-trash-o.fa-2x.fa

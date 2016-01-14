@@ -1,0 +1,35 @@
+//
+   Created by talha on 8.12.2015.
+
+extends ../admin_layout
+block content
+    .row(ng-controller="MembersController as Ctrl" ng-show="validUser")
+
+        .twelve.columns
+            form
+                .form-search
+                    input(type="text", placeholder="Search", name="search", id="search", ng-model="search")
+                    label(for="search"): i.fa.fa-search
+        table.u-full-width.admin-table
+            thead
+                tr
+                    th #
+                    th Name
+                    th Surname
+                    th Email
+                    th CineCardID
+                    th Update
+                    th Delete
+            tbody
+                tr(ng-repeat="member in members | filter: search")
+                    td {{ member.id }}
+                    td: input(type="text", ng-model="member.name")
+                    td: input(type="text", ng-model="member.surname")
+                    td: input(type="email", ng-model="member.email")
+                    td: input(type="text", ng-model="member.cineCardId")
+                    td
+                        button.button.button-update(ng-click="update($index)")
+                            i.fa-wrench.fa-2x.fa
+                    td
+                        button.button.button-delete(ng-click="delete($index)")
+                            i.fa-trash-o.fa-2x.fa

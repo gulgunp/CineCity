@@ -1,0 +1,42 @@
+//
+   Created by talha on 24.12.2015.
+extends ../admin_layout
+block content
+    .row(ng-controller="SeanceController as Ctrl")
+        .twelve.columns
+            form
+                .form-search
+                    input(type="text", placeholder="Search", name="search", id="search", ng-model="search")
+                    label(for="search"): i.fa.fa-search
+        .twelve.columns
+            form(ng-submit="addSeance()")
+                .four.columns
+                    label(for="smovie") Movie:
+                    select(id="smovie",ng-change="select.movie()", ng-model="newSeance.movie", required)
+                        option(value="{{movie.id}}", ng-repeat="movie in movies") {{ movie.name }}
+                .four.columns
+                    label(for="scinema") Cinema:
+                    select(id="scinema", ng-change="select.cinema()", ng-model="newSeance.cinema", required)
+                        option(value="{{cinema.id}}", ng-repeat="cinema in cinemas") {{ cinema.name }}
+                .four.columns
+                    label(for="shall") Cinehall:
+                    select(id="shall", ng-model="newSeance.cineHall", required)
+                        option(value="{{hall.id}}", ng-repeat="hall in halls") {{ hall.name }}
+                .twelve.columns
+                    .four.columns
+                        label(for="stime") Start Time:
+                        input(type="text", placeholder="Ex. 11:00", id="stime", ng-model="newSeance.startTime", required)
+                    .four.columns
+                        label(for="setime") End Time:
+                        input(type="text", placeholder="Ex. 11:00", id="setime", ng-model="newSeance.endTime", required)
+                    .four.columns
+                        label(for="sdate") Date:
+                        input(type="date", id="sdate", ng-model="newSeance.date", required)
+                .twelve.columns
+                    input(type="submit", value="Add Seance").button.button-primary.u-full-width
+        .row
+            div(ng-repeat="movie in movies | filter: search")
+                h5 {{ movie.name }}
+                div(style="display:inline-block; margin:8px", ng-repeat="seance in movie.seances")
+                    p(style="display:inline-block")   {{seance.startTime}} - {{seance.endTime}} - {{seance.cineHall}}
+                    a(href="#", style="margin-left: 8px", ng-click="delete(seance)").del-seance DEL

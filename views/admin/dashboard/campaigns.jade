@@ -1,0 +1,37 @@
+//
+   Created by talha on 23.12.2015.
+
+extends ../admin_layout
+
+block content
+    .row(ng-controller="CampaignController as Ctrl")
+        .ten.columns.offset-by-one
+            form(ng-submit="addCampaign()")
+                input(type="text", placeholder="Campaign Image URL", name="cimg", id="cimg", ng-model="newCampaign.img", required).u-full-width
+                textarea(rows="4", placeholder="Description", cols="50", ng-model="newCampaign.description", required).u-full-width
+                .twelve.columns
+                    .nine.columns
+                        input(type="number", placeholder="Available (0 or 1)", ng-model="newCampaign.available", required).pull-right
+                    .three.columns
+                        button.button.pull-right.button-primary Add Campaign
+        table.u-full-width.admin-table
+            thead
+                tr
+                    th #
+                    th Image URL
+                    th Description
+                    th Available
+                    th Update
+                    th Delete
+            tbody
+                tr(ng-repeat="campaign in campaigns")
+                    td {{campaign.cmpCode}}
+                    td: input(type="text", ng-model="campaign.img").u-full-width
+                    td: textarea(rows="4", cols="50", ng-model="campaign.description").u-full-width
+                    td: input(type="number", ng-model="campaign.available").u-full-width
+                    td
+                        button.button.button-update(ng-click="update($index)")
+                            i.fa-wrench.fa-2x.fa
+                    td
+                        button.button.button-delete(ng-click="delete($index)")
+                            i.fa-trash-o.fa-2x.fa

@@ -1,0 +1,188 @@
+.login-container {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  position: fixed; }
+
+nav {
+  display: flex;
+  z-index: 9999;
+  position: fixed;
+  max-width: 960px;
+  width: 80%;
+  padding: 0;
+  align-items: center;
+  background: white;
+  border-bottom: 2px ridge #9DFF1C; }
+  nav .user-bar {
+    display: flex;
+    align-items: center; }
+    nav .user-bar p {
+      font-size: 14px;
+      padding: 0;
+      margin: 0; }
+    nav .user-bar a {
+      cursor: pointer;
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: bold;
+      margin: 0 5px; }
+  nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+    nav ul li {
+      display: flex;
+      margin: 0;
+      margin-bottom: 5px;
+      padding: 5px 10px;
+      font-weight: bold;
+      border-right: inset 1px #FF7B1C;
+      border-left: inset 1px #FF7B1C;
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+      cursor: hand; }
+      nav ul li a {
+        text-decoration: none;
+        color: #141414; }
+        nav ul li a:hover {
+          color: #141414; }
+      nav ul li.active {
+        background: #FF7B1C; }
+        nav ul li.active a {
+          color: #fafafa; }
+          nav ul li.active a:hover {
+            color: #fafafa; }
+      nav ul li:first-child {
+        border-left: none; }
+      nav ul li:last-child {
+        border-right: none; }
+      nav ul li:hover {
+        background: rgba(255, 123, 28, 0.3);
+        transition: all 0.3s ease-in-out; }
+
+.dash-content {
+  padding-top: 60px;
+  position: relative; }
+
+.movie {
+  position: relative;
+  display: flex; }
+  .movie img {
+    border: 1px #9DFF1C ridge;
+    border-radius: 5px; }
+  .movie h3 {
+    margin-bottom: 10px; }
+    .movie h3 span {
+      color: #aaa;
+      margin-left: 5px;
+      font-size: 70%; }
+  .movie h5 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    height: 30px;
+    min-height: 30px; }
+    .movie h5 p {
+      display: inline-block;
+      margin-left: 5px;
+      font-weight: bold; }
+
+.last-member-item {
+  cursor: pointer;
+  transition: all 0.2s linear; }
+  .last-member-item:hover {
+    color: #0FA0CE;
+    transition: all 0.2s linear;
+    text-decoration: underline; }
+
+.admin-table td input {
+  margin-bottom: 0px; }
+
+.admin-table td .button {
+  margin-bottom: 0px; }
+
+.admin-table td .button-update {
+  border: none;
+  background: #ff9100;
+  color: #fafafa;
+  width: 50px;
+  padding: 0;
+  padding-top: 3px; }
+  .admin-table td .button-update:hover {
+    background: rgba(255, 145, 0, 0.8); }
+
+.admin-table td .button-delete {
+  border: none;
+  background: #d50000;
+  color: #fafafa;
+  width: 50px;
+  padding: 0;
+  padding-top: 3px; }
+  .admin-table td .button-delete:hover {
+    background: rgba(213, 0, 0, 0.8); }
+
+.form-search {
+  position: relative;
+  height: 38px;
+  padding: 0;
+  border-radius: 4px;
+  box-shadow: none;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
+  .form-search input[type="text"] {
+    width: 100%; }
+  .form-search i {
+    color: #a1a1a1;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    padding: 5px 5px;
+    font-size: 24px; }
+
+.modal-overlay {
+  position: absolute !important;
+  z-index: 9999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  opacity: 0.8; }
+
+.modal-dialog {
+  z-index: 10000;
+  position: absolute;
+  width: 50%;
+  /* Center the dialog */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 4px 4px 80px #000; }
+  .modal-dialog .modal-close a {
+    color: darkred;
+    text-align: end;
+    padding: 7px; }
+  .modal-dialog .modal-content h3 {
+    text-align: center; }
+  .modal-dialog .modal-content hr {
+    margin-top: 10px; }
+  .modal-dialog .modal-content form textarea {
+    resize: none; }
+  .modal-dialog .modal-content form label {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 38px;
+    margin-bottom: 1.5rem; }
+
+/*# sourceMappingURL=admin.css.map */

@@ -1,0 +1,78 @@
+$distanceBacgroundColor: #170019
+$mainTextColor: #ff6e00
+$navigationBlueColor: #2d67a3
+$buttonRed: #91231e
+$darkBlue: #0b0230
+@font-face
+  font-family: "FiraSans"
+  src: url("../fonts/FiraSans-Heavy.otf")
+
+@font-face
+  font-family: "LatoBold"
+  src: url("../fonts/Lato-Bold.ttf")
+
+.title
+  text-align: center
+
+.storeTopBar
+  height: 77px
+  display: flex
+  align-items: flex-end
+  background: $distanceBacgroundColor
+  padding-bottom: 14px
+  border-bottom: 2px ridge $mainTextColor
+  .logo
+    margin-bottom: -14px
+    height: 100%
+    width: 200px
+    display: flex
+    align-items: flex-end
+  .title
+    font-family: "FiraSans"
+    color: $mainTextColor
+    font-size: 25pt
+    text-transform: uppercase
+
+.searchBar
+  position: relative
+  height: 38px
+  padding: 0
+  border-radius: 4px
+  box-shadow: none
+  box-sizing: border-box
+  -webkit-appearance: none
+  -moz-appearance: none
+  appearance: none
+  input[type="text"]
+    width: 100%
+  i
+    color: #a1a1a1
+    position: absolute
+    right: 0px
+    top: 0px
+    padding: 5px 5px
+    font-size: 24px
+
+.city
+  display: block
+  color: $mainTextColor
+  .cineCompany
+    font-size: 15pt
+    font-family: "LatoBold"
+    color: $darkBlue
+    border-bottom: 1.5px solid $mainTextColor
+    margin: 15px 15px
+    padding: 10px 0
+  .cinema
+    display: inline-block
+    font-size: 13pt
+    color: $mainTextColor
+    font-family: "LatoBold"
+    border-radius: 10px
+    padding: 10px
+    cursor: pointer
+    &:hover
+      background: $mainTextColor
+      color: #fafafa
+      transition: all ease-in-out 0.3s
+

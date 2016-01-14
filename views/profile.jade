@@ -1,0 +1,45 @@
+//
+   Created by gulgu on 23.12.2015.
+
+extends layout
+
+block extraHeaders
+    link(rel="stylesheet", href="/stylesheets/profile.css")
+
+block content
+    div(ng-controller="ProfileController")
+        .container(style="background: #fff; margin-top:50px")
+            .row
+                .twelve.columns
+                    .storeTopBar
+                        .three.columns
+                            .logo
+                                a(href="/"): img(src="/images/logo.png").u-max-full-width
+                        .six.columns
+                            .title Profil
+                        .three.columns
+                            .userField.pull-right
+                                .userInfo {{userDetail.name}} {{userDetail.surname}}
+                                a(href="#", ng-click="logout()") Çıkış
+            .row
+                .InfoDetail
+                    .backgroundImg
+                        .profilePhoto
+                    .userDetail
+                        .nameSurname {{userDetail.name}} {{userDetail.surname}}
+                        .field
+                            label Email:
+                            p {{userDetail.email}}
+                        .field
+                            label Phone:
+                            p {{ userDetail.phone }}
+                        .field(ng-show="userDetail.cineCard")
+                            label CineCard:
+                            p
+                                span CardNo:
+                                |  {{userDetail.cineCard.cardNumber}}
+                            p
+                                span Money:
+                                |  {{ userDetail.cineCard.cineMoney }} TL
+                        .field(ng-show="!userDetail.cineCard")
+                            button.button(ng-click="addCard()") Add A Card

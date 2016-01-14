@@ -1,0 +1,34 @@
+//
+   Created by gulgu on 22.12.2015.
+
+extends layout
+
+block extraHeaders
+    link(rel="stylesheet", href="/stylesheets/cinehall.css")
+
+block content
+    div(ng-controller="CinehallController")
+        .container(style="background: #fff; margin-top:50px")
+            .row
+                .twelve.columns
+                    .storeTopBar
+                        .three.columns
+                            .logo
+                                a(href="/"): img(src="/images/logo.png").u-max-full-width
+                        .six.columns
+                            .title Salonlar
+                        .three.columns
+                            form(style = "margin-bottom: 5px" )
+                                .searchBar
+                                    input(type="text", placeholder="Arama", name="search", id="search", ng-model="search")
+                                    label(for="search"): i.fa.fa-search
+
+            .row(style="padding: 15px")
+                .city
+                    div(ng-repeat="company in companies | filter: search")
+                        .cineCompany {{company.name}}
+                        div(style="padding: 5px 15px")
+                            div(ng-repeat="cinema in company.cinemas | filter: search" style="display: inline-block")
+                                .cinema {{cinema.name}} {{cinema.city}}
+
+

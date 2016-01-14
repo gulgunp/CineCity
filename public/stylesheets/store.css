@@ -1,0 +1,109 @@
+@font-face {
+  font-family: "FiraSans";
+  src: url("../fonts/FiraSans-Heavy.otf"); }
+
+@font-face {
+  font-family: "LatoBold";
+  src: url("../fonts/Lato-Bold.ttf"); }
+
+.title {
+  text-align: center; }
+
+.searchBar {
+  position: relative;
+  height: 38px;
+  padding: 0;
+  border-radius: 4px;
+  box-shadow: none;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
+  .searchBar input[type="text"] {
+    width: 100%; }
+  .searchBar i {
+    color: #a1a1a1;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    padding: 5px 5px;
+    font-size: 24px; }
+
+.products {
+  display: flex;
+  padding: 20px 0px;
+  flex-wrap: wrap; }
+  .products .columns.zero-left {
+    margin-left: 0; }
+  .products .product {
+    padding: 10px 0;
+    height: 300px; }
+    .products .product .columns {
+      position: relative;
+      height: 100%;
+      overflow: hidden; }
+    .products .product .image {
+      height: 100%; }
+      .products .product .image img {
+        height: 100%;
+        border-radius: 8px; }
+    .products .product .content {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      bottom: -58px;
+      left: 0;
+      padding: 10px 0;
+      height: 38px;
+      background: rgba(255, 110, 0, 0.7);
+      transition: all ease-in-out 0.3s; }
+      .products .product .content.animateUp {
+        transform: translateY(-58px);
+        transition: all ease-in-out 0.3s; }
+      .products .product .content .name {
+        text-align: center;
+        color: #fafafa;
+        font-family: "LatoBold";
+        font-size: 13pt; }
+      .products .product .content .price {
+        text-align: center;
+        font-family: LatoBold;
+        font-size: 10pt;
+        color: #fafafa; }
+      .products .product .content .button {
+        padding: 0 15px;
+        color: #fafafa;
+        font-family: "LatoBold";
+        border-color: #fafafa;
+        margin-bottom: 0;
+        transition: all ease-in-out 0.3s; }
+        .products .product .content .button:hover {
+          background: #fafafa;
+          color: #141414;
+          transition: all ease-in-out 0.3s; }
+
+.storeSideBar {
+  height: 500px;
+  background: blueviolet; }
+
+.storeTopBar {
+  height: 77px;
+  display: flex;
+  align-items: flex-end;
+  background: #170019;
+  padding-bottom: 14px;
+  border-bottom: 2px ridge #ff6e00; }
+  .storeTopBar .logo {
+    margin-bottom: -14px;
+    height: 100%;
+    width: 200px;
+    display: flex;
+    align-items: flex-end; }
+  .storeTopBar .title {
+    font-family: "FiraSans";
+    color: #ff6e00;
+    font-size: 25pt;
+    text-transform: uppercase; }
+
+/*# sourceMappingURL=store.css.map */

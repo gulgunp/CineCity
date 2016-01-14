@@ -1,0 +1,362 @@
+@font-face {
+  font-family: "FiraSans";
+  src: url("../fonts/FiraSans-Heavy.otf"); }
+
+@font-face {
+  font-family: "LatoBold";
+  src: url("../fonts/Lato-Bold.ttf"); }
+
+body {
+  padding: 0px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 0px;
+  background: #170019; }
+
+.distance {
+  display: flex;
+  height: 100vh;
+  width: 1200px;
+  background: #170019;
+  margin: 0px auto; }
+  .distance .movieName {
+    align-items: center;
+    color: #ff6e00;
+    height: 100%;
+    width: 120px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center; }
+    .distance .movieName #title-container {
+      height: 375px;
+      overflow: hidden;
+      width: 30pt;
+      position: relative; }
+      .distance .movieName #title-container #movie-title {
+        cursor: pointer;
+        position: absolute;
+        font-size: 30pt;
+        letter-spacing: 5px;
+        font-family: "FiraSans";
+        width: 30pt;
+        word-wrap: break-word;
+        text-transform: uppercase;
+        text-align: center; }
+  .distance .teaserField {
+    color: #ff6e00;
+    width: 460px;
+    height: 100vh;
+    margin-left: 10px;
+    margin-right: 10px;
+    z-index: 5000;
+    background-image: url("/images/tape.png");
+    overflow: hidden; }
+    .distance .teaserField .content .teaser {
+      width: 370px;
+      margin-left: 46px;
+      height: 351px;
+      margin-top: 20px;
+      background: green;
+      border-radius: 8px;
+      overflow: hidden; }
+      .distance .teaserField .content .teaser iframe {
+        border-radius: 8px; }
+      .distance .teaserField .content .teaser:first-child {
+        margin-top: 146px; }
+      .distance .teaserField .content .teaser:last-child {
+        margin-bottom: 204px; }
+  .distance .logoField {
+    color: #ff6e00;
+    width: 460px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+    margin-left: 10px; }
+    .distance .logoField .logoImg {
+      height: 140px; }
+    .distance .logoField .machineImg {
+      height: 480px;
+      min-height: 320px;
+      background-image: url("/images/projector.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position-x: -70px;
+      background-position-y: 30px; }
+    .distance .logoField .navField {
+      height: 80px;
+      width: 100%;
+      display: flex;
+      font-family: "FiraSans";
+      font-size: 15pt; }
+      .distance .logoField .navField a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        height: 100%;
+        color: #ff6e00;
+        text-decoration: none;
+        width: 141px;
+        border-right: 2px solid #fafafa;
+        transition: all linear 0.2s; }
+        .distance .logoField .navField a:last-child {
+          border-right: none; }
+        .distance .logoField .navField a:hover {
+          color: rgba(255, 110, 0, 0.7);
+          transition: all linear 0.2s; }
+
+.campaingField {
+  position: relative;
+  height: 350px;
+  width: 1200px;
+  margin: 0px auto; }
+  .campaingField .leftArrow {
+    position: absolute;
+    cursor: pointer;
+    top: 140px;
+    width: 70px;
+    z-index: 9999;
+    height: 70px;
+    background-image: url("/images/CampLeftArrow.png");
+    background-size: cover;
+    left: 30px;
+    transition: all ease-in-out 0.2s; }
+    .campaingField .leftArrow:hover {
+      width: 80px;
+      height: 80px;
+      left: 25px;
+      top: 135px;
+      transition: all ease-in-out 0.2s; }
+  .campaingField .rightArrow {
+    cursor: pointer;
+    position: absolute;
+    top: 140px;
+    width: 70px;
+    height: 70px;
+    background-image: url("/images/CampRightArrow.png");
+    background-size: cover;
+    right: 30px;
+    transition: all ease-in-out 0.2s; }
+    .campaingField .rightArrow:hover {
+      width: 80px;
+      height: 80px;
+      right: 25px;
+      top: 135px;
+      transition: all ease-in-out 0.2s; }
+  .campaingField .campaign {
+    height: 100%;
+    width: 100%; }
+    .campaingField .campaign div {
+      height: 100%;
+      width: 100%; }
+
+.seatImgField {
+  height: 350px;
+  width: 1200px;
+  background-size: cover;
+  background-image: url("/images/seats.jpg");
+  background-attachment: fixed;
+  margin: 0px auto; }
+
+.nowSeenMovie {
+  background-color: white;
+  color: #ff6e00;
+  width: 1200px;
+  margin: 0px auto; }
+  .nowSeenMovie .topBar {
+    height: 91px;
+    width: 100%;
+    position: relative; }
+    .nowSeenMovie .topBar .columns {
+      height: 100%; }
+    .nowSeenMovie .topBar .navBrand {
+      padding-bottom: 14px;
+      height: calc(100% - 14px);
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-end;
+      font-family: "FiraSans";
+      font-size: 35pt; }
+    .nowSeenMovie .topBar .navigation {
+      height: calc(100% - 14px);
+      font-family: "FiraSans";
+      font-size: 20pt;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-around;
+      border-bottom: 2px inset #ff6e00;
+      padding-bottom: 14px; }
+      .nowSeenMovie .topBar .navigation a {
+        cursor: pointer;
+        color: #2d67a3;
+        text-decoration: none; }
+        .nowSeenMovie .topBar .navigation a:hover {
+          color: rgba(45, 103, 163, 0.7); }
+  .nowSeenMovie .movieContainer {
+    padding: 21px 0;
+    width: 100%;
+    height: 100%; }
+    .nowSeenMovie .movieContainer .movie {
+      position: relative;
+      display: flex;
+      padding: 24px 0;
+      overflow: hidden;
+      border-bottom: 3px solid #aaa; }
+      .nowSeenMovie .movieContainer .movie .showTicketView {
+        transition: all ease-in-out 0.3s;
+        top: 0 !important; }
+      .nowSeenMovie .movieContainer .movie .ticketView {
+        transition: all ease-in-out 0.3s;
+        position: absolute;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 110, 0, 0.9);
+        top: 100%; }
+        .nowSeenMovie .movieContainer .movie .ticketView .close {
+          position: absolute;
+          right: 10px;
+          top: 10px;
+          display: inline-block;
+          color: #fafafa;
+          font-size: 20pt;
+          cursor: pointer; }
+        .nowSeenMovie .movieContainer .movie .ticketView .content {
+          display: inline-block;
+          margin: 15px;
+          width: 80%; }
+          .nowSeenMovie .movieContainer .movie .ticketView .content .movieName {
+            color: #fafafa;
+            font-family: FiraSans;
+            font-size: 15pt; }
+          .nowSeenMovie .movieContainer .movie .ticketView .content .messageContainer {
+            display: flex;
+            align-items: center; }
+            .nowSeenMovie .movieContainer .movie .ticketView .content .messageContainer .image {
+              width: 180px;
+              height: 260px; }
+              .nowSeenMovie .movieContainer .movie .ticketView .content .messageContainer .image img {
+                height: 100%;
+                width: 100%; }
+            .nowSeenMovie .movieContainer .movie .ticketView .content .messageContainer .message {
+              display: flex;
+              width: calc(100% - 180px);
+              flex-direction: column;
+              color: #fafafa;
+              font-family: FiraSans;
+              font-size: 18pt;
+              align-items: center; }
+              .nowSeenMovie .movieContainer .movie .ticketView .content .messageContainer .message p {
+                margin-bottom: 5px;
+                display: inline-block; }
+          .nowSeenMovie .movieContainer .movie .ticketView .content .ticketFormContainer {
+            margin-top: -20px; }
+            .nowSeenMovie .movieContainer .movie .ticketView .content .ticketFormContainer form {
+              margin-bottom: 0px; }
+              .nowSeenMovie .movieContainer .movie .ticketView .content .ticketFormContainer form label {
+                font-family: FiraSans;
+                font-size: 12pt;
+                color: #fafafa; }
+              .nowSeenMovie .movieContainer .movie .ticketView .content .ticketFormContainer form .selectContainer {
+                margin: 10px 20px;
+                padding: 10px;
+                display: inline-block; }
+              .nowSeenMovie .movieContainer .movie .ticketView .content .ticketFormContainer form select {
+                height: 30px;
+                font-family: LatoBold; }
+              .nowSeenMovie .movieContainer .movie .ticketView .content .ticketFormContainer form .selectSeatButton {
+                text-decoration: none;
+                background: #170019;
+                color: #fafafa;
+                font-family: FiraSans;
+                font-size: 13pt;
+                display: inline-block;
+                padding: 8px 15px;
+                border-radius: 5px;
+                cursor: pointer; }
+      .nowSeenMovie .movieContainer .movie .image {
+        width: 230px;
+        height: 351px;
+        overflow: hidden;
+        border: 3px solid #ff6e00; }
+      .nowSeenMovie .movieContainer .movie .movieContent {
+        width: 100%; }
+        .nowSeenMovie .movieContainer .movie .movieContent .description {
+          padding: 8px 11px;
+          font-family: "LatoBold";
+          font-size: 15pt;
+          color: #0b0230; }
+        .nowSeenMovie .movieContainer .movie .movieContent .details {
+          padding: 0 11px; }
+          .nowSeenMovie .movieContainer .movie .movieContent .details .detail {
+            text-decoration: underline;
+            font-family: "FiraSans";
+            font-size: 15pt;
+            text-align: right;
+            padding: 11px 10px; }
+            .nowSeenMovie .movieContainer .movie .movieContent .details .detail a {
+              color: #170019; }
+              .nowSeenMovie .movieContainer .movie .movieContent .details .detail a:hover {
+                color: rgba(23, 0, 25, 0.7); }
+          .nowSeenMovie .movieContainer .movie .movieContent .details .seances {
+            font-family: "LatoBold";
+            color: #686868; }
+            .nowSeenMovie .movieContainer .movie .movieContent .details .seances span {
+              font-size: 18pt;
+              text-decoration: underline;
+              display: block; }
+            .nowSeenMovie .movieContainer .movie .movieContent .details .seances ul {
+              padding: 0;
+              margin: 11px 4px;
+              list-style: none;
+              font-size: 15pt; }
+              .nowSeenMovie .movieContainer .movie .movieContent .details .seances ul li {
+                padding: 0 6px;
+                display: inline-block;
+                border-right: 1px ridge #686868; }
+                .nowSeenMovie .movieContainer .movie .movieContent .details .seances ul li:last-child {
+                  border-right: none; }
+        .nowSeenMovie .movieContainer .movie .movieContent .name {
+          color: #ff6e00;
+          padding: 0 11px;
+          font-family: "FiraSans";
+          font-size: 20pt; }
+        .nowSeenMovie .movieContainer .movie .movieContent .info {
+          padding: 0 20px; }
+          .nowSeenMovie .movieContainer .movie .movieContent .info .statisticBar {
+            padding: 10px 0;
+            color: #2d67a3;
+            font-family: "LatoBold";
+            font-size: 15pt; }
+            .nowSeenMovie .movieContainer .movie .movieContent .info .statisticBar .seen {
+              margin-bottom: 6px; }
+            .nowSeenMovie .movieContainer .movie .movieContent .info .statisticBar .point {
+              margin-top: 6px; }
+          .nowSeenMovie .movieContainer .movie .movieContent .info .ticketButton {
+            margin: 4px 20px; }
+            .nowSeenMovie .movieContainer .movie .movieContent .info .ticketButton a {
+              height: 36px;
+              padding: 8px 14px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 112px;
+              border-radius: 5px;
+              background: #91231e;
+              text-decoration: none;
+              color: #fafafa;
+              font-family: "FiraSans";
+              font-size: 15pt;
+              cursor: pointer; }
+              .nowSeenMovie .movieContainer .movie .movieContent .info .ticketButton a:hover {
+                background: rgba(145, 35, 30, 0.7); }
+
+.title-slide-animation {
+  -webkit-transition: 10s linear;
+  -moz-transition: 10s linear;
+  -ms-transition: 10s linear;
+  -o-transition: 10s linear;
+  transition: 10s linear; }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,74 @@
+@font-face {
+  font-family: "FiraSans";
+  src: url("../fonts/FiraSans-Heavy.otf"); }
+
+@font-face {
+  font-family: "LatoBold";
+  src: url("../fonts/Lato-Bold.ttf"); }
+
+.title {
+  text-align: center; }
+
+.storeTopBar {
+  height: 77px;
+  display: flex;
+  align-items: flex-end;
+  background: #170019;
+  padding-bottom: 14px;
+  border-bottom: 2px ridge #ff6e00; }
+  .storeTopBar .logo {
+    margin-bottom: -14px;
+    height: 100%;
+    width: 200px;
+    display: flex;
+    align-items: flex-end; }
+  .storeTopBar .title {
+    font-family: "FiraSans";
+    color: #ff6e00;
+    font-size: 25pt;
+    text-transform: uppercase; }
+
+.searchBar {
+  position: relative;
+  height: 38px;
+  padding: 0;
+  border-radius: 4px;
+  box-shadow: none;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
+  .searchBar input[type="text"] {
+    width: 100%; }
+  .searchBar i {
+    color: #a1a1a1;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    padding: 5px 5px;
+    font-size: 24px; }
+
+.city {
+  display: block;
+  color: #ff6e00; }
+  .city .cineCompany {
+    font-size: 15pt;
+    font-family: "LatoBold";
+    color: #0b0230;
+    border-bottom: 1.5px solid #ff6e00;
+    margin: 15px 15px;
+    padding: 10px 0; }
+  .city .cinema {
+    display: inline-block;
+    font-size: 13pt;
+    color: #ff6e00;
+    font-family: "LatoBold";
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer; }
+    .city .cinema:hover {
+      background: #ff6e00;
+      color: #fafafa;
+      transition: all ease-in-out 0.3s; }
+
+/*# sourceMappingURL=cinehall.css.map */

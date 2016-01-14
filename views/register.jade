@@ -1,0 +1,56 @@
+//
+   Created by gulgu on 24.12.2015.
+extends layout
+
+block extraHeaders
+    link(rel="stylesheet", href="/stylesheets/register.css")
+    script(src="/javascripts/controllers/registerController.js")
+    script(src="/javascripts/services/RegisterService.js")
+
+block content
+    div(ng-controller="RegisterController")
+        .container(style="background: #fff; margin-top:50px")
+            .row
+                .twelve.columns
+                    .storeTopBar
+                        .three.columns
+                            .logo
+                                a(href="/"): img(src="/images/logo.png").u-max-full-width
+                        .six.columns
+                            .title Üye Ol
+
+            .row
+
+                .backgroundImg
+                .twelve.columns
+                    .content
+                        .six.columns
+                            .login
+                                p Giriş
+                                label(style="color: darkred; text-align: center; margin-bottom:10px; margin-top:-15px" ng-show="showError") {{ errorMessage }}
+                                form(ng-submit="login()")
+                                    input(type="email", placeholder="Email", name="lemail", id="lemail", ng-model="loginData.email", required)
+                                    input(type= "password", placeholder="Parola", name="lpassword",id="lpassword",ng-model="loginData.password", required)
+                                    input(type="submit" value="Giriş Yap").button.button-primary.u-full-width
+                        .six.columns
+                            .memberDetail
+                                p Kayıt Ol
+                                label(style="color: darkred; text-align: center; margin-bottom:10px; margin-top:-15px" ng-show="registerError != '' ") {{ registerError }}
+                                form(ng-submit="register()")
+                                    .field
+                                        label İsim:
+                                        input(type="text", placeholder="İsim", name="rname", id="rname", ng-model="registerData.name" required)
+                                    .field
+                                        label Soyisim:
+                                        input(type="text", placeholder="Soyisim", name="rsurname", id="rsurname", ng-model="registerData.surname" required)
+                                    .field
+                                        label Email:
+                                        input(type="email", placeholder="Email", name="remail", id="remail", ng-model="registerData.email" required)
+                                    .field
+                                        label Parola:
+                                        input(type="password", placeholder="Parola", name="rpassword", id="rpassword", ng-model="registerData.password" required)
+                                    .field
+                                        label Telefon:
+                                        input(type="text", placeholder="Telefon No.", name="tphone", id="rphone", ng-model="registerData.phone" required)
+                                    .field
+                                        input(type="submit", value="Kaydol")

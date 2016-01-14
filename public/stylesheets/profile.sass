@@ -1,0 +1,106 @@
+$distanceBacgroundColor: #170019
+$mainTextColor: #ff6e00
+$navigationBlueColor: #2d67a3
+$buttonRed: #91231e
+$darkBlue: #0b0230
+@font-face
+  font-family: "FiraSans"
+  src: url("../fonts/FiraSans-Heavy.otf")
+
+@font-face
+  font-family: "LatoBold"
+  src: url("../fonts/Lato-Bold.ttf")
+
+.title
+  text-align: center
+
+.storeTopBar
+  height: 77px
+  display: flex
+  align-items: flex-end
+  background: $distanceBacgroundColor
+  padding-bottom: 14px
+  border-bottom: 2px ridge $mainTextColor
+  .logo
+    margin-bottom: -14px
+    height: 100%
+    width: 200px
+    display: flex
+    align-items: flex-end
+  .title
+    font-family: "FiraSans"
+    color: $mainTextColor
+    font-size: 25pt
+    text-transform: uppercase
+
+  .userField
+    display: flex
+    .userInfo
+      margin: 0 5px
+      color: $mainTextColor
+      font-family: "FiraSans"
+      font-size: 18px
+    a
+      padding: 5px
+      margin: 0 5px
+      color: $navigationBlueColor
+      font-family: "FiraSans"
+      font-size: 15px
+      text-decoration: none
+      &:hover
+        color: #fafafa
+        text-decoration: underline
+        transition: all ease-in-out 0.3s
+
+.backgroundImg
+  height: 350px
+  width: 100%
+  position: relative
+  background:
+    image: url("/images/cropped-klaket.jpg")
+    size: auto 600px
+    attachment: fixed
+    position: top center
+  .profilePhoto
+    border: 2px solid $buttonRed
+    width: 200px
+    height: 200px
+    background:
+      image: url("/images/user.jpg")
+      size: cover
+      position: center
+      repeat: no-repeat
+    position: absolute
+    top: 90px
+    margin: 90px
+    border-radius: 50%
+
+.userDetail
+  padding: 40px 0
+  margin: 0px 20px
+  font-size: 15px
+  font-family: "LatoBold"
+  .nameSurname
+    padding: 0 80px
+    font-size: 25px
+    font-family: "FiraSans"
+    color: $buttonRed
+    border: 2px
+    border-bottom: $buttonRed
+  .field
+    margin: 10px 0
+    margin-left: 80px
+    label
+      color: $mainTextColor
+      font-family: FiraSans
+      font-size: 12pt
+    p
+      font-family: LatoBold
+      margin-left: 20px
+      margin-bottom: 5px
+      font-size: 13pt
+      span
+        font-family: FiraSans
+        font-size: 12pt
+        color: $mainTextColor
+
